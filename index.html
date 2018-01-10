@@ -11,10 +11,10 @@
 <body>
 <!--navbar -->
   <!--navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg" id="Nav">
     <a class="navbar-brand" href="#"><img src="assets/img/logo_movieasy.png" id="logo"></a>
   <!--boton ingresar -->
-    <button type="button" class="btn btn-dark ingresar" data-toggle="modal" data-target="#ingresarModal" data-whatever="@mdo">Ingresar</button>
+    <button type="button" class="btn ingresar" data-toggle="modal" data-target="#ingresarModal" data-whatever="@mdo" style="background-color: #e1455b; color:white;">Ingresar</button>
   <!--modal ingresar -->  
     <div class="modal fade" id="ingresarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
@@ -35,13 +35,13 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark ingresar" data-dismiss="modal">Ingresar</button>
+          <button type="button"  id="boton2" class="btn ingresar" data-dismiss="modal" style="background-color: #e1455b; color:white;">Ingresar</button>
         </div>
       </div>
     </div>
     </div>
   <!--boton registrarse --> 
-  <button type="button" class="btn btn-dark registrarse" data-toggle="modal" data-target="#registrarseModal" data-whatever="@mdo">Registrarse</button>
+  <button type="button" class="btn registrarse" data-toggle="modal" data-target="#registrarseModal" bdata-whatever="@mdo" style="background-color: #e1455b; color:white;">Registrarse</button>
   <!--modal registrarse --> 
     <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
@@ -66,7 +66,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-dark ingresar" data-dismiss="modal">Ingresar</button>
+          <button type="button" class="btn ingresar" data-dismiss="modal" style="background-color: #e1455b; color:white;">Ingresar</button>
         </div>
       </div>
     </div>
@@ -79,27 +79,27 @@
 <div class="row">
   <div class="col-lg-12 col-md-12 col-xs-12" id="buscador1">
     <div class="buscador">
-      <i class="fa fa-search" aria-hidden="true" style="font-size: 1em; float: right; margin-right: 1em; margin-top: 1em;"></i>
+      <i class="fa fa-search" aria-hidden="true" style=" color: #3f324f; font-size: 1em; float: right; margin-right: 1em; margin-top: 1em;"></i>
     </div>
       <P>Buscar por:</P>
       <label class="custom-control custom-radio">
         <input class="custom-control-input" type="radio" name="radioUnchecked">
-        <span class="custom-control-indicator radio-primary"></span>
+        <span class="custom-control-indicator" style="background-color: #3f324f;"></span>
         <span class="custom-control-description">Titulo</span>
       </label>
       <label class="custom-control custom-radio">
         <input class="custom-control-input" type="radio" name="radioUnchecked">
-        <span class="custom-control-indicator radio-primary"></span>
+        <span class="custom-control-indicator" style="background-color: #3f324f;"></span>
         <span class="custom-control-description">Director</span>
       </label>
       <label class="custom-control custom-radio">
         <input class="custom-control-input" type="radio" name="radioUnchecked">
-        <span class="custom-control-indicator radio-primary"></span>
+        <span class="custom-control-indicator" style="background-color: #3f324f;"></span>
         <span class="custom-control-description">Actor/Actriz</span>
       </label>
       <label class="custom-control custom-radio">
         <input class="custom-control-input" type="radio" name="radioUnchecked">
-        <span class="custom-control-indicator radio-primary"></span>
+        <span class="custom-control-indicator" style="background-color: #3f324f;"></span>
         <span class="custom-control-description">Año</span>
       </label>
       </div>
@@ -153,7 +153,5 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
-<script type="text/javascript" src=assets/js/search.js></script>
 </body>
 </html>
