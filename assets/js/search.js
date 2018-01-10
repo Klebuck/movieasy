@@ -6,7 +6,7 @@ apiCallPel(pelicula);
 });
 
 $('#enviar_peli_all').click(function(){
-var pelicula = $('#peli_all').val();
+var peli_all = $('#peli_all').val();
 apiCallAll(peli_all);
 
 });
@@ -48,11 +48,11 @@ $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&s=' + encodeURI(peli_all)).t
  	var resultado=""
  	resultadoArreglo=response.Search; //El arreglo de peliculas obtenido
     for (var i=0; i<resultadoArreglo.length;i++) {   // recorrer el arreglo de peliculas
-	    lenguaje = apiCallAll(resultadoArreglo[i].Title); //buscar el titulo de la pelicula para sacar el lenguaje
-        //como esperar que se ejecute la funcion para leer el resultado???
+	   lenguaje = apiCallPel(resultadoArreglo[i].Title); //buscar el titulo de la pelicula para sacar el lenguaje
+      //  como esperar que se ejecute la funcion para leer el resultado???
         resultado += resultadoArreglo[i].Title+ " : "+lenguaje + "\n"; 
 	}
-    console.log(resultado)
+    console.log(response)
  });
 
     
