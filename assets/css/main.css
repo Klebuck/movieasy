@@ -1,15 +1,22 @@
-
+body{
+	background-color: #3f324f;
+}
 nav{
 	background-color: #24242d;
 }
 
 #logo{
-	width: 5em;
+	width: 8em;
+	height: auto;
+}
+
+#logo-morado{
+	width: 8em;
 	height: auto;
 }
 
 .ingresar {
-	margin-left: 60em;
+	margin-left: 53em;
 }
 
 .registrarse {
@@ -34,5 +41,10 @@ nav{
 	margin-bottom: 3em;
 }
 
-
+.custom-control{
+	color:white;
+}
+#buscarpor{
+	color:white;
+}
 
