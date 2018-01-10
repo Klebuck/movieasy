@@ -15,15 +15,27 @@ nav{
 	height: auto;
 }
 
-.ingresar {
-	margin-left: 53em;
+.ingresar{
+	margin-left: 60%;
+	background-color: #e1455b; 
+	color:white;
+}
+
+.fa-fa-search{
+	color: #3f324f;
+	font-size: 1em;
+	margin-right: 1em;
+	margin-top: 1em;
 }
 
 .registrarse {
 	margin-left: 3em;
+	background-color: #e1455b; 
+	color:white;
 }
 
 .buscador{
+	background-color: white;
 	border:solid black 1px;
 	width: 25em;
 	height: 3em;
@@ -35,6 +47,15 @@ nav{
 #buscador1{
 	text-align: center;
 	margin-bottom: 3em;
+}
+
+.custom-control-indicator{
+	background-color: #e1455b;
+}
+
+#idioma{
+	background-color: #e1455b;
+	color: white;
 }
 
 #carousel{
