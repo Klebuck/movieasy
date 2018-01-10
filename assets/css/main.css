@@ -1,0 +1,24 @@
+.ingresar {
+	margin-left: 53em;
+}
+
+.registrarse {
+	margin-left: 3em;
+}
+
+.buscador{
+	border:solid black 1px;
+	width: 25em;
+	height: 3em;
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+#buscador1{
+	text-align: center;
+	margin-bottom: 1em;
+}
+
+#carousel{
+	margin-bottom: 3em;
+}
