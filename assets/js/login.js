@@ -2,12 +2,12 @@
 var usuarioLogueado="";
 
 var config = {
-    apiKey: "AIzaSyDGtZ_xGNto5YRyJ0UyjFpvTfZEeoGM3FA",
-    authDomain: "travel-a3801.firebaseapp.com",
-    databaseURL: "https://travel-a3801.firebaseio.com",
-    projectId: "travel-a3801",
-    storageBucket: "travel-a3801.appspot.com",
-    messagingSenderId: "679853152568"
+    apiKey: "AIzaSyCXbwKuVGx-iGeSPMp8tetJORIthSMYbRk",
+    authDomain: "movie-dc30f.firebaseapp.com",
+    databaseURL: "https://movie-dc30f.firebaseio.com",
+    projectId: "movie-dc30f",
+    storageBucket: "movie-dc30f.appspot.com",
+    messagingSenderId: "294137075020"
   };
 firebase.initializeApp(config);
 var db = firebase.database();
