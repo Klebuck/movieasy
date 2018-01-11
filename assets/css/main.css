@@ -34,6 +34,11 @@ nav{
 	color:white;
 }
 
+#sinEspacios{
+	margin-left: 0;
+	margin-right: 0;
+}
+
 .buscador{
 	background-color: white;
 	border:solid black 1px;
@@ -65,7 +70,21 @@ nav{
 .custom-control{
 	color:white;
 }
+
 #buscarpor{
 	color:white;
+}
+
+#recientes {
+	width: 39%;
+	height: 28%;
+	font-size: 17px;
+	color: #64004f;
+  background-color: #cec4b6;
+}
+
+#estrenos {
+	width: 39%;
+	display: inherit;
 }
 

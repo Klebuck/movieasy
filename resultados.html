@@ -74,18 +74,40 @@
 	<!--fin navbar -->
 	<!--muestra el resultado del search -->
 	<!--inicio buscador-->
-	<div class="row">
-		<div class="col-lg-push-2 col-lg-8 col-lg-pull-2" id="buscador1">
+	<div class="row" id="sinEspacios"> <!-- aca agregue el id sin Espacios para quitar el lado lateral sobrante del row que contiene a search--> 
+		<div class="col-lg-12 col-md-12 col-xs-12" id="buscador1">
 	    <div class="buscador" style="background-color: white;">
 	      <i class="fa fa-search" aria-hidden="true" style=" color: #3f324f; font-size: 1em; float: right; margin-right: 1em; margin-top: 1em;"></i>
 			</div>
 		</div>
 	</div>
 	<!--fin buscador-->
-	<!--inicio resultado de buscar movie-->
-	<div class="row">
-		<div class="col-lg-12 col-md-12 col-xs-12" id="resultadoMovie">
-		
+	<!--inicio botones laterales categorias-->
+	<div class="row" id="sinEspacios">
+		<div class="col-lg-4 pull-lg-8 col-md-4 pull-md-8">
+			<div class="categoriasRecientes">
+				<span class="badge badge-secondary" id="recientes">Recientes</span>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">ESTRENOS</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">AGREGADOS
+				<br>RECIENTEMENTE</button>
+			</div>
+			<div class="categoriasGenerales">
+				<span class="badge badge-secondary" id="recientes">Géneros</span>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">ACCIÓN</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">TERROR</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">SUSPENSO</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">DRAMA</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">COMEDIA</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">SCI-FI</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">FANTASIA</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">DOCUMENTAL</button>
+				<button type="button" class="btn btn-outline-secondary" id="estrenos">MUSICAL</button>
+			</div>
+		</div>
+	<!--fin botones laterales categorias-->
+	<!-- inicio  resultado de buscar movie-->
+		<div class="col-lg-8 push-lg-4 col-md-8 push-md-4">
+		caja del resultado de busqueda de movie
 		</div>
 	</div>
 	<!--fin resultado de buscar movie-->
