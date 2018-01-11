@@ -39,7 +39,7 @@ nav{
 	border:solid black 1px;
 	width: 25em;
 	height: 3em;
-	margin-left: 30em;
+	margin-left: 27em;
 	margin-top: 1em;
 	margin-bottom: 2em;
 }
@@ -224,7 +224,6 @@ width: 640px;
 .secundario{
 	text-align: center;
 }
-
 .list-group-item{
 	background-color: transparent;
 	border:0px;
