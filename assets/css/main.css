@@ -26,6 +26,8 @@ nav{
 	font-size: 1em;
 	margin-right: 1em;
 	margin-top: 1em;
+	display: inline-block;
+	float: left;
 }
 
 .registrarse {
@@ -80,11 +82,12 @@ nav{
 	height: 28%;
 	font-size: 17px;
 	color: #64004f;
-  background-color: #cec4b6;
+ 	background-color: #cec4b6;
 }
 
 #estrenos {
 	width: 39%;
 	display: inherit;
 }
+
 
