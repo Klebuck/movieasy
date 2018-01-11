@@ -7,6 +7,10 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/arafkarim/BootstrapPlusPlus/2d8d0b9d/bpp/bpp.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<<<<<<< HEAD
+=======
+	 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+>>>>>>> agregando js login y js perfil, funcionalidad a los modal registro de usuario, ingreso de usuario, almacenamiento en firebase, subir imagen de perfil
 	</head>
 <body>
 	<!--navbar -->
@@ -25,24 +29,27 @@
 	        <form>
 	          <div class="form-group">
 	            <label for="recipient-name" class="control-label">Usuario-email</label>
-	            <input type="text" class="form-control" id="email">
+	            <input type="text" class="form-control" id="correoLog">
 	          </div>
 	          <div class="form-group">
 	            <label for="message-text" class="control-label">Clave</label>
-	            <textarea class="form-control" id="password"></textarea>
+	            <input type="password" class="form-control" id="claveLog">
 	          </div>
+	          <div class="form-group"><span id="mensajeUsuario"></span></div>
 	        </form>
 	      </div>
 	      <div class="modal-footer">
-	        <button id="#btn-login" type="button" class="btn btn-dark ingresar" data-dismiss="modal">Ingresar</button>
+	        <button id="btn-login" type="button" class="btn btn-dark ingresar">Ingresar</button>
 	      </div>
 	    </div>
 	  </div>
 		</div>
 	<!--boton registrarse --> 
 	<button type="button" class="btn btn-dark registrarse" data-toggle="modal" data-target="#registrarseModal" data-whatever="@mdo">Registrarse</button>
-	<!--modal registrarse -->	
-		<div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+
+
+	<!--Modal registrarse -->	
+	<div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
 	  <div class="modal-dialog" role="document">
 	    <div class="modal-content">
 	      <div class="modal-header">
@@ -50,28 +57,37 @@
 	      </div>
 	      <div class="modal-body">
 	        <form>
+	        	<div class="form-group">
+	            <label for="recipient-name" class="control-label">Nick</label>
+	            <input type="text" class="form-control" id="nick">
+	          </div>
 	          <div class="form-group">
 	            <label for="recipient-name" class="control-label">Usuario</label>
-	            <input type="text" class="form-control" id="recipient-name">
+	            <input type="text" class="form-control" id="nombre">
 	          </div>
 	          <div class="form-group">
 	            <label for="recipient-name" class="control-label">e-mail</label>
-	            <input type="text" class="form-control" id="recipient-name">
+	            <input type="text" class="form-control" id="correo">
 	          </div>
 	          <div class="form-group">
 	            <label for="message-text" class="control-label">Clave</label>
-	            <textarea class="form-control" id="message-text"></textarea>
+	            <input type="password" class="form-control" id="clave">
+	          </div>
+              <div class="form-group">
+	            <label for="recipient-name" class="control-label">Imagen de Perfil</label>
+	            <input type="file" class="form-control" id="foto">
 	          </div>
 	        </form>
 	      </div>
 	      <div class="modal-footer">
-	        <button type="button" class="btn btn-dark ingresar" data-dismiss="modal">Registrarse</button>
+	        <button id="btn-sign-up" type="button" class="btn btn-dark ingresar">Registrarse</button>
 	      </div>
 	    </div>
 	  </div>
 		</div>
 	</nav>
 	<!--fin navbar -->
+<<<<<<< HEAD
 	<!--muestra el resultado del search -->
 	<!--inicio buscador-->
 	<div class="row" id="sinEspacios"> <!-- aca agregue el id sin Espacios para quitar el lado lateral sobrante del row que contiene a search--> 
@@ -117,6 +133,32 @@
 	</div>
 	
 	
+=======
+
+<div class="container" style="background-color: #fff">
+	<div class="row">
+	  <div class="form-group">
+        <label for="nickName" class="control-label">Nick</label>
+        <div id="nickName" class="form-control"></div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="form-group">
+        <label for="nickName" class="control-label">Nombres</label>
+        <div id="nombreUsuario" class="form-control"></div>
+      </div>
+	</div>
+   <div class="row">
+      <div class="form-group">
+        <div id="imag" class="form-control"><img id="fotoPerfil" src="" class=""></div>
+      </div>
+	</div>
+	
+</div>
+
+
+
+>>>>>>> agregando js login y js perfil, funcionalidad a los modal registro de usuario, ingreso de usuario, almacenamiento en firebase, subir imagen de perfil
 
 
 	<!-- Scripts -->
@@ -126,6 +168,11 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
 	<!-- scripts a js-->
 	<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+<<<<<<< HEAD
 	<script src="https://use.fontawesome.com/2dd3618c98.js"></script>
+=======
+	<!--<script type="text/javascript" src=assets/js/perfil.js></script>-->
+	<script type="text/javascript" src=assets/js/login.js></script>
+>>>>>>> agregando js login y js perfil, funcionalidad a los modal registro de usuario, ingreso de usuario, almacenamiento en firebase, subir imagen de perfil
 </body>
 </html>

@@ -3,6 +3,7 @@ body{
 }
 nav{
 	background-color: #24242d;
+	margin-bottom: 20px;
 }
 
 #logo{
@@ -96,4 +97,43 @@ nav{
 	background-color: #fff;
 }
 
+#fondo_perfil{
+  background: white;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.border{
+	width: 150px;
+	height: 150px;
+}
+
+.imagen_perfil{
+	width: 150px;
+	height: 150px;
+}
+
+.imagen_movie_perfil{
+	width: 90%;
+	height: 300px;
+	background:#E1455B;
+	
+}
+
+.imagen_movie_perfil:hover
+{
+box-shadow:
+1px 1px #53a7ea,
+2px 2px #53a7ea,
+3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
+}
+
+.imagen_perfil_peque{
+	width: 50%;
+	height: 150px;
+	background:#E1455B;
+	
+}
 

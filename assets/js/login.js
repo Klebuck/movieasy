@@ -1,5 +1,6 @@
 // Initialize Firebase
 var usuarioLogueado="";
+var rutaFoto=""
 
 var config = {
     apiKey: "AIzaSyCXbwKuVGx-iGeSPMp8tetJORIthSMYbRk",
@@ -12,19 +13,31 @@ var config = {
 firebase.initializeApp(config);
 var db = firebase.database();
 
-/*var ref = db.ref('clark');
-ref.on('value',function(ss){
-/ //console.log(usuario);
- document.getElementById('newClave').innerHTML=usuario.clave;
- document.getElementById('newNombre').innerHTML=usuario.nombre;
- document.getElementById('newCorreo').innerHTML=usuario.correo;
+//Autenticación para hacer uso del storage
+var authService = firebase.auth();
+//Base de datos de imagenes
+var dbFotos = firebase.storage();
 
-});*/
-
-  //crearUsuario('clark','Jesus Manrique','manriquej@gmail.com');
-  //crearUsuario('gaby','Gabriela Castillo','castillg@gmail.com');
+ 
 
 $(document).ready(function(){
+
+// realizamos la autenticación anónima (debe estar activada en la consola de Firebase)
+  authService.signInAnonymously()
+    .catch(function(error) {
+      console.error('Detectado error de autenticación', error);
+    });
+
+  // asociamos el manejador de eventos sobre el INPUT FILE
+    document.getElementById('foto').addEventListener('change', function(evento){
+    evento.preventDefault();
+    //Obteniendo el nick del input del formulario
+    var nickName = $("#nick").val();
+    //Creando una variable archivo para guardar la foto temporalmente
+    var archivo  = evento.target.files[0];
+    //Subir archivo con la foto y el nombre del usuario
+    subirArchivo(archivo,nickName);
+  });
 
 	$("#btn-login").click(function(){
 		
@@ -35,55 +48,79 @@ $(document).ready(function(){
 		// Suiche que me indica si encontre el correo y la clave en caso de encontrarlo cambia valor de 0 a 1
 			var logeado = 0;
 			usr = Object.keys(usuario);
-            for(i=0; i<usr.length; i++){
-            	if(usuario[usr[i]].correo == $("#email").val() && usuario[usr[i]].clave == $("#password").val())
+           for(i=0; i<usr.length; i++){
+           	console.log(usuario)
+            if(usuario[usr[i]].correo == $("#correoLog").val() && usuario[usr[i]].clave == $("#claveLog").val())
             	{
+                alert('entrando');
                   //VARIABLE DE SESION PARA GUADRA EL NICK
-                  sessionStorage['usuarioLogueado'] = usr[i];
-                  logeado=1
-            	}	
+                 sessionStorage['usuarioLogueado'] = usr[i];
+                 logeado=1
+           	  }	
             }
             if(logeado == 1){
-              document.location.replace('post.html')
-              Materialize.toast('Inicio de sesion exitoso', 3000, 'rounded') // 'rounded' is the class I'm applying to the toast
-        
+              //document.location.replace('resultados.html')
+              cargaDatos();
             }else 
               {
-                Materialize.toast('"Ese usuario no existe o la contraseña esta incorrecta"', 3000, 'rounded');
+                $('#mensajeUsuario').text('"Ese usuario no existe o la contraseña esta incorrecta"', 3000, 'rounded');
                 
             }
 	    })
-    })
+   })
 
-	// Rescatar inormación del formulario crear perfil
+// Rescatar información del formulario crear perfil
 	$('#btn-sign-up').click(function(){
- // haciendo referencia a el campo usuarios de la base de datos
+// haciendo referencia a el campo usuarios de la base de datos
 	  var usuarios = db.ref('usuarios');
      
       var nick = $('#nick').val();
       var nombre = $('#nombre').val();
-      var email = $('#correo').val();
-      var nacionalidad = $('#nacionalidad').val();
+      var correo = $('#correo').val();
       var clave = $('#clave').val();
-  //var password2 = $('#password2').val();
-  // Creo un objeto para almacenar los datos de un usuario
-      var usuario = new Object();
-      usuario.nombre=nombre;
-      usuario.correo = email;
-      usuario.nacionalidad= nacionalidad;
-      usuario.clave= clave;
-//llamo al campo referencia de usuarios de la base de datos que es nick 
-// guardo con set el objeto usuario con todos los datos de los usuarios
-      usuarios.child(nick).set(usuario);
-
-      document.location.replace('post.html')
-
-    })
- $('#modal1').modal();
   
-})    
+// Creo un objeto para almacenar los datos de un usuario
+      var usuario = new Object();
+      usuario.nick=nick;
+      usuario.nombre=nombre;
+      usuario.correo = correo;
+      usuario.clave= clave;
+      usuario.foto=rutaFoto;
+//Llamo al campo referencia de usuarios de la base de datos que es nick 
+// Guardo con set el objeto usuario con todos los datos de los usuarios
 
-function cargaDatos(){
+      usuarios.child(nick).set(usuario);
+      sessionStorage['usuarioLogueado'] = nick;
+      alert('usuarios registrado con exito')
+      //document.location.replace('resultados.html')
+      cargaDatos();
+    })
+  
+});
+
+
+// función que se encargará de subir el archivo
+    function subirArchivo(archivo, nick) {
+      // creo una referencia/ruta/carpeta/repositorio al lugar donde guardaremos el archivo
+      var rutaServer = dbFotos.ref('perfiles').child(nick);
+      // Comienzo la tarea de upload/Subiendo la foto
+      var uploadTask = rutaServer.put(archivo);
+      // defino un evento para saber qué pasa con ese upload iniciado
+      uploadTask.on('state_changed', null,
+        function(error){
+          console.log('Error al subir el archivo', error);
+        },
+        function(){
+          console.log('Subida completada');
+          //mensajeFinalizado(uploadTask.snapshot.downloadURL, uploadTask.snapshot.totalBytes);
+          //Guardo la ruta donde quedo registrada la foto en el servidor
+          //snapshot.downloadURL es el equivalente a ss recasta la foto
+          rutaFoto = uploadTask.snapshot.downloadURL
+        }
+      );
+    }
+
+    function cargaDatos(){
        //console.log("Usuario: "+sessionStorage['usuarioLogueado']) 
 
         var usuarios = db.ref('usuarios');
@@ -97,19 +134,9 @@ function cargaDatos(){
                       indice = i;
                   } 
                 }
-
                 //console.log(usuario[usr[indice]].correo)
-                $('#nombre').text(usuario[usr[indice]].nombre);
-                 $('#nac').text(usuario[usr[indice]].nacionalidad);
-
-                
+                $('#nombreUsuario').text(usuario[usr[indice]].nombre);
+                $('#nickName').text(usr[indice]);
+                $('#fotoPerfil').attr('src',usuario[usr[indice]].foto)
           })
-
     }
-
-/* //Llamanso al modal de registro de usuario
-$(document).ready(function(){
-   
-  });
-
- */

@@ -6,6 +6,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/arafkarim/BootstrapPlusPlus/2d8d0b9d/bpp/bpp.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="assets/js/app.js">
+  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
 <body>
 
@@ -14,65 +16,72 @@
     <a class="navbar-brand" href="#"><img src="assets/img/logo_movieasy.png" id="logo"></a>
 
   <!--boton ingresar -->
-    <button type="button" class="btn ingresar" id="ingresar" data-toggle="modal" data-target="#ingresarModal" data-whatever="@mdo">Ingresar</button>
+    <!--boton ingresar --> 
+    <button type="button" class="btn btn-dark ingresar" data-toggle="modal" data-target="#ingresarModal" data-whatever="@mdo">Ingresar</button>
   <!--modal ingresar -->  
-
     <div class="modal fade" id="ingresarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <img src="assets/img/logo_movieasy_morado.png" id="logo-morado">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="control-label">Usuario-email</label>
-                <input type="text" class="form-control" id="recipient-name">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="control-label">Clave</label>
-                <textarea class="form-control" id="message-text"></textarea>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" id="ingresar" class="btn ingresar" data-dismiss="modal">Ingresar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  <!--boton registrarse --> 
-  <button type="button" class="btn registrarse" id="ingresar" data-toggle="modal" data-target="#registrarseModal" bdata-whatever="@mdo">Registrarse</button>
-
-  <!--modal registrarse --> 
-
-    <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <img src="assets/img/logo_movieasy_morado.png" id="logo-morado">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
         <div class="modal-body">
           <form>
             <div class="form-group">
-              <label for="recipient-name" class="control-label">Usuario</label>
-              <input type="text" class="form-control" id="recipient-name">
-            </div>
-            <div class="form-group">
-              <label for="recipient-name" class="control-label">e-mail</label>
-              <input type="text" class="form-control" id="recipient-name">
+              <label for="recipient-name" class="control-label">Usuario-email</label>
+              <input type="text" class="form-control" id="correoLog">
             </div>
             <div class="form-group">
               <label for="message-text" class="control-label">Clave</label>
-              <textarea class="form-control" id="message-text"></textarea>
+              <input type="password" class="form-control" id="claveLog">
+            </div>
+            <div class="form-group"><span id="mensajeUsuario"></span></div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-login" type="button" class="btn btn-dark ingresar">Ingresar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+  <!--boton registrarse --> 
+  <button type="button" class="btn btn-dark registrarse" data-toggle="modal" data-target="#registrarseModal" data-whatever="@mdo">Registrarse</button>
+
+
+  <!--Modal registrarse --> 
+  <div class="modal fade" id="registrarseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Nick</label>
+              <input type="text" class="form-control" id="nick">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">Usuario</label>
+              <input type="text" class="form-control" id="nombre">
+            </div>
+            <div class="form-group">
+              <label for="recipient-name" class="control-label">e-mail</label>
+              <input type="text" class="form-control" id="correo">
+            </div>
+            <div class="form-group">
+              <label for="message-text" class="control-label">Clave</label>
+              <input type="password" class="form-control" id="clave">
+            </div>
+              <div class="form-group">
+              <label for="recipient-name" class="control-label">Imagen de Perfil</label>
+              <input type="file" class="form-control" id="foto">
             </div>
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn ingresar" data-dismiss="modal">Ingresar</button>
+          <button id="btn-sign-up" type="button" class="btn btn-dark ingresar">Registrarse</button>
         </div>
       </div>
     </div>
@@ -160,7 +169,6 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-=======
 <!--CAROUSEL 2-->
 <!-- Scripts -->
    <!-- link a bootstrap plus-->
@@ -172,6 +180,8 @@
    <script src="https://use.fontawesome.com/2dd3618c98.js"></script>
    <script type="text/javascript" src=assets/js/login.js></script>
    <script type="text/javascript" src=assets/js/app.js></script>
->>>>>>> recogiendo cambios
+   <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <!--<script type="text/javascript" src=assets/js/perfil.js></script>-->
+  <script type="text/javascript" src=assets/js/login.js></script>
 </body>
 </html>
