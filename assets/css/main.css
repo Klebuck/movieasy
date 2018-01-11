@@ -21,13 +21,13 @@ nav{
 	color:white;
 }
 
-.fa-fa-search{
+.fa-search{
 	color: #3f324f;
 	font-size: 1em;
-	margin-right: 1em;
+	float: right;
+	margin-right: 2em;
 	margin-top: 1em;
-	display: inline-block;
-	float: left;
+
 }
 
 .registrarse {
