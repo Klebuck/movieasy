@@ -93,19 +93,14 @@ nav{
 	height: 150px;
 }
 .imagen_movie_perfil{
-	width: 90%;
+	width: 100%;
 	height: 300px;
-	background:#E1455B;	
+	opacity:1;
 }
-.imagen_movie_perfil:hover
-{
-box-shadow:
-1px 1px #53a7ea,
-2px 2px #53a7ea,
-3px 3px #53a7ea;
--webkit-transform: translateX(-3px);
-transform: translateX(-3px);
+.imagen_movie_perfil:hover{
+    opacity:0.5;
 }
+
 .imagen_perfil_peque{
 	width: 50%;
 	height: 150px;
@@ -214,7 +209,7 @@ width: 640px;
 	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	left: 0; bottom: 0;	
-width: 640px;	
+    width: 640px;	
 }
 .image_title a {
 	display: block;
@@ -225,4 +220,12 @@ width: 640px;
 }
 #estrenos{
 	color: white;
+}
+.secundario{
+	text-align: center;
+}
+
+.list-group-item{
+	background-color: transparent;
+	border:0px;
 }
