@@ -5,43 +5,35 @@ nav{
 	background-color: #24242d;
 	margin-bottom: 20px;
 }
-
 #logo{
 	width: 8em;
 	height: auto;
 }
-
 #logo-morado{
 	width: 8em;
 	height: auto;
 }
-
 .ingresar{
 	margin-left: 60%;
 	background-color: #e1455b; 
 	color:white;
 }
-
 .fa-search{
 	color: #3f324f;
 	font-size: 1em;
 	float: right;
 	margin-right: 2em;
 	margin-top: 1em;
-
 }
-
 .registrarse {
 	margin-left: 3em;
 	background-color: #e1455b; 
 	color:white;
 }
-
 #sinEspacios{
 	margin-left: 0;
 	margin-right: 0;
 }
-
 .buscador{
 	background-color: white;
 	border:solid black 1px;
@@ -51,33 +43,26 @@ nav{
 	margin-top: 1em;
 	margin-bottom: 2em;
 }
-
 #buscador1{
 	text-align: center;
 	margin-bottom: 3em;
 }
-
 .custom-control-indicator{
 	background-color: #e1455b;
 }
-
 #idioma{
 	background-color: #e1455b;
 	color: white;
 }
-
 #carousel{
 	margin-bottom: 3em;
 }
-
 .custom-control{
 	color:white;
 }
-
 #buscarpor{
 	color:white;
 }
-
 #recientes {
 	width: 60%;
 	height: 28%;
@@ -85,41 +70,34 @@ nav{
 	color: #64004f;
  	background-color: #cec4b6;
 }
-
 #estrenos {
 	width: 60%;
 	display: inherit;
 }
-
 .buscador2 {
 	width: 104%;
 	height: 55%;
 	background-color: #fff;
 }
-
 #fondo_perfil{
   background: white;
   width: 90%;
   margin-top: 20px;
 }
-
 .border{
 	width: 150px;
 	height: 150px;
 }
-
 .imagen_perfil{
 	width: 150px;
 	height: 150px;
 }
-
 .imagen_movie_perfil{
 	width: 90%;
 	height: 300px;
 	background:#E1455B;
 	
 }
-
 .imagen_movie_perfil:hover
 {
 box-shadow:
@@ -129,7 +107,6 @@ box-shadow:
 -webkit-transform: translateX(-3px);
 transform: translateX(-3px);
 }
-
 .imagen_perfil_peque{
 	width: 50%;
 	height: 150px;
