@@ -78,7 +78,7 @@ nav{
 }
 
 #recientes {
-	width: 39%;
+	width: 60%;
 	height: 28%;
 	font-size: 17px;
 	color: #64004f;
@@ -86,8 +86,14 @@ nav{
 }
 
 #estrenos {
-	width: 39%;
+	width: 60%;
 	display: inherit;
+}
+
+.buscador2 {
+	width: 104%;
+	height: 55%;
+	background-color: #fff;
 }
 
 
