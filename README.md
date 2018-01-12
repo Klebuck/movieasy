@@ -23,4 +23,4 @@ Nuestro grupo contaba con dos integrantes UX y dos FRONT, el primer día dividim
 ### __¿Qué funciones técnicas utilizamos en nuestro trabajo y por qué?__  
  
  Para la realización del Perfil se utilizó Firebase para guardar los datos que el usuario ingreso a través del registro, luego se consultan estos datos de la base de datos y se ubican en el perfil, donde el usuario puede ver pelicula, seleccionar  y crear una lista para ver sus peliculas favoritas, vistas y por ver, estas funciones se crearon con jquery.
- 
+ También se utilizo la API OMDB para extraer datos de todas las películas. Esta base nos sirvió para la función de buscador, el usuario coloca un término en el buscador y este mostrará todos los resultados que contengan ese término en el título de la película, también al hacer click en el botón "Detalle" podrá ver información más detallada de la película y los botones para agregar en"favoritos", "por ver" y "ya visto".
