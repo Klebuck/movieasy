@@ -277,3 +277,13 @@ padding-bottom: 20px;
   margin-top: 147%;
   margin-left: 27%;
 }
+.cerrar {
+	margin-left: 3em;
+	background-color: #e1455b; 
+	color:white;
+}
+.miPerfil {
+	margin-left: 60%;
+	background-color: #e1455b; 
+	color:white;
+}
