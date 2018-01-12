@@ -186,12 +186,13 @@ width: 640px;
 }
 /* Footer */
 footer{
-   background-color: #24242d;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #CCC;
+  background-color: #24242d;
+  margin-top: 30px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #CCC;
 }
 footer p {
   padding: 10.5px;
@@ -268,10 +269,9 @@ padding-bottom: 20px;
 	margin-top: 16%;
   margin-left: 27%;
 }
-
 .imagen_poster {
 	width: 200px;
-	height: 220px;
+	height: auto;
 }
 .adhe {
   margin-top: 147%;
@@ -281,4 +281,13 @@ padding-bottom: 20px;
 	margin-left: 3em;
 	background-color: #e1455b; 
 	color:white;
+}
+.busqueda{
+  margin-bottom: 30px;
+}
+.margen{
+  margin-left: 100px;
+}
+hr{
+  background: white;
 }
