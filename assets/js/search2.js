@@ -5,14 +5,10 @@ $(document).ready(function(){
   $('#searchForm').click(function(){
     var text = $("#searchText").val();
     $("#searchText").val('');
+    $("#portada").hide();
     getMovies(text);
   });
-
-
-
 }); // ready
-
-
 
 function getMovies(text){
   $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&s=' + encodeURI(text)).then(function(dataMovies){  
@@ -22,7 +18,7 @@ function getMovies(text){
     var movieTitle = searchArr[i].Title;
     var moviePoster = searchArr[i].Poster;
     var movieID = searchArr[i].imdbID;
-    $('#movies').append('<div class="col-lg-3"><div class="altura"><img src="' + moviePoster + '"><h3>' + movieTitle+ '</h3><button class="moviepage" value="' + movieID + '" href="#">Detalles</button></div></div>');
+    $('#movies').append('<div class="col-lg-3"><div class="altura"><img src="' + moviePoster + '"><h3>' + movieTitle+ '</h3><button class="moviepage boton" value="' + movieID + '" href="#">Detalles</button></div></div>');
     };//for
 
  $('.moviepage').click(function(){
@@ -31,13 +27,8 @@ function getMovies(text){
      $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&i=' + encodeURI(imdb)).then(function(singleMovie){
         console.log(singleMovie);
      });
-
-    
   });//funcion sinlglepage
-
-
   });//llamada 1
-
 };//funcion
 
 
