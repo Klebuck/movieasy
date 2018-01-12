@@ -13,6 +13,7 @@ $(document).ready(function(){
 function getMovies(text){
   $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&s=' + encodeURI(text)).then(function(dataMovies){  
     var searchArr = dataMovies.Search;
+    $( "#movies" ).empty();
     console.log(searchArr);
     for (var i in searchArr){
     var movieTitle = searchArr[i].Title;
