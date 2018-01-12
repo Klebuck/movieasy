@@ -1,83 +1,83 @@
 body{
-  background-color: #3f324f;
+	background-color: #3f324f;
 }
 nav{
-  background-color: #24242d;
-  margin-bottom: 20px;
+	background-color: #24242d;
+	margin-bottom: 20px;
 }
 #logo{
-  width: 8em;
-  height: auto;
+	width: 8em;
+	height: auto;
 }
 #logo-morado{
-  width: 8em;
-  height: auto;
+	width: 8em;
+	height: auto;
 }
 .ingresar{
-  margin-left: 60%;
-  background-color: #e1455b; 
-  color:white;
+	margin-left: 60%;
+	background-color: #e1455b; 
+	color:white;
 }
 .fa-search{
-  color: #3f324f;
-  font-size: 1em;
-  float: left;
-  margin-left: 2em;
-  margin-top: 1em;
+	color: #3f324f;
+	font-size: 1em;
+	float: right;
+	margin-right: 2em;
+	margin-top: 1em;
 }
 .registrarse {
-  margin-left: 3em;
-  background-color: #e1455b; 
-  color:white;
+	margin-left: 3em;
+	background-color: #e1455b; 
+	color:white;
 }
 #sinEspacios{
-  margin-left: 0;
-  margin-right: 0;
+	margin-left: 0;
+	margin-right: 0;
 }
 .buscador{
-  background-color: white;
-  border:solid black 1px;
-  width: 25em;
-  height: 3em;
-  margin-left: 27em;
-  margin-top: 1em;
-  margin-bottom: 2em;
+	background-color: white;
+	border:solid black 1px;
+	width: 25em;
+	height: 3em;
+	margin-left: 30em;
+	margin-top: 1em;
+	margin-bottom: 2em;
 }
 #buscador1{
-  text-align: center;
-  margin-bottom: 3em;
+	text-align: center;
+	margin-bottom: 3em;
 }
 .custom-control-indicator{
-  background-color: #e1455b;
+	background-color: #e1455b;
 }
 #idioma{
-  background-color: #e1455b;
-  color: white;
+	background-color: #e1455b;
+	color: white;
 }
 #carousel{
-  margin-bottom: 3em;
+	margin-bottom: 3em;
 }
 .custom-control{
-  color:white;
+	color:white;
 }
 #buscarpor{
-  color:white;
+	color:white;
 }
 #recientes {
-  width: 60%;
-  height: 28%;
-  font-size: 17px;
-  color: #64004f;
-  background-color: #cec4b6;
+	width: 60%;
+	height: 28%;
+	font-size: 17px;
+	color: #64004f;
+ 	background-color: #cec4b6;
 }
 #estrenos {
-  width: 60%;
-  display: inherit;
+	width: 60%;
+	display: inherit;
 }
 .buscador2 {
-  width: 104%;
-  height: 55%;
-  background-color: #fff;
+	width: 104%;
+	height: 55%;
+	background-color: #fff;
 }
 #fondo_perfil{
   background: white;
@@ -85,118 +85,68 @@ nav{
   margin-top: 20px;
 }
 .border{
-  width: 150px;
-  height: 150px;
+	width: 150px;
+	height: 150px;
 }
 .imagen_perfil{
-  width: 150px;
-  height: 150px;
+	width: 150px;
+	height: 150px;
 }
 .imagen_movie_perfil{
-  width: 100%;
-  height: 300px;
-  opacity:1;
+	width: 90%;
+	height: 300px;
+	background:#E1455B;	
 }
-.imagen_movie_perfil:hover{
-    opacity:0.5;
+.imagen_movie_perfil:hover
+{
+box-shadow:
+1px 1px #53a7ea,
+2px 2px #53a7ea,
+3px 3px #53a7ea;
+-webkit-transform: translateX(-3px);
+transform: translateX(-3px);
 }
-
 .imagen_perfil_peque{
-  width: 50%;
-  height: 150px;
-  background:#E1455B;
-}
-/*Carrusel 2*/
-.accordian {
-  width: 805px; height: 320px;
-  overflow: hidden;
-  /*Time for some styling*/
-  margin: 100px auto;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-}
-/*A small hack to prevent flickering on some browsers*/
-.accordian ul {
-  width: 1200px;
-  /*This will give ample space to the last item to move
-  instead of falling down/flickering during hovers.*/
-}
-.accordian li {
-  position: relative;
-  display: block;
-  width: 160px;
-  float: left;
-  border-left: 1px solid #888;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  /*Transitions to give animation effect*/
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /*If you hover on the images now you should be able to 
-  see the basic accordian*/
-}
-/*Reduce with of un-hovered elements*/
-.accordian ul:hover li {width: 40px;}
-/*Lets apply hover effects now*/
-/*The LI hover style should override the UL hover style*/
-.accordian ul li:hover {width: 640px;}
-.accordian li img {
-  display: block;
-}
-/*Image title styles*/
-.image_title {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0; bottom: 0; 
-width: 640px; 
-}
-.image_title a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  font-size: 16px;
+	width: 50%;
+	height: 150px;
+	background:#E1455B;
+	
 }
 .posterPeli {
-	width: 132%;
-	height: 75%;
-	margin-left: 9%;
-  margin-top: 10%;
+	width: 24%;
+	height: 80%;
 }
 /*Carrusel 2*/
 .accordian {
-  width: 805px; height: 320px;
-  overflow: hidden;
-  /*Time for some styling*/
-  margin: 100px auto;
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
-  -moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	width: 805px; height: 320px;
+	overflow: hidden;
+	/*Time for some styling*/
+	margin: 100px auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
 }
 /*A small hack to prevent flickering on some browsers*/
 .accordian ul {
-  width: 1200px;
-  /*This will give ample space to the last item to move
-  instead of falling down/flickering during hovers.*/
+	width: 1200px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
 }
 .accordian li {
-  position: relative;
-  display: block;
-  width: 160px;
-  float: left;
-  border-left: 1px solid #888;
-  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
-  /*Transitions to give animation effect*/
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  /*If you hover on the images now you should be able to 
-  see the basic accordian*/
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	border-left: 1px solid #888;
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
 }
 /*Reduce with of un-hovered elements*/
 .accordian ul:hover li {width: 40px;}
@@ -204,75 +154,39 @@ width: 640px;
 /*The LI hover style should override the UL hover style*/
 .accordian ul li:hover {width: 640px;}
 .accordian li img {
-  display: block;
+	display: block;
 }
 /*Image title styles*/
 .image_title {
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 0; bottom: 0; 
-    width: 640px; 
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+width: 640px;	
 }
 .image_title a {
-  display: block;
-  color: #fff;
-  text-decoration: none;
-  padding: 20px;
-  font-size: 16px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
 }
-#estrenos{
-  color: white;
+.estrenos2{
+	color: white;
+	margin-left: 35%;
+	font-size: 400%;
 }
-.secundario{
-  text-align: center;
+/* Footer */
+footer{
+   background-color: #24242d;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    text-align: center;
+    color: #CCC;
 }
-.list-group-item{
-  background-color: transparent;
-  border:0px;
-}
-#portada{
-  margin: 0;
-  padding: 0;
-}
-#searchText{
-  width: 50%;
-  border: none;
-  display: inline-block;
-  margin-top: 5px;
-  outline: none;
-}
-.boton{
-  background: #a1455b!important;
-  color: white !important;
-  outline: none!important;
-}
-.boton:hover{
-  background: white!important;
-  color: #a1455b!important;
-}
-.col-lg-3{
-  height: 420px;
-  vertical-align: top;
-}
-.col-lg-3 img{
-  width: auto;
-  height: 300px;
-}
-.col-lg-3 h3{
-  margin-top: 10px;
-  color: white;
-  font-size: 20px;
-  font-weight: 400;
-}
-#titleMovieResultados {
-	font-size: 204%;
-  margin-top: 4%;
-  margin-left: 6%;
-}
-#sinopsis {
-	font-size: 130%;
-  margin-left: 6%;
-}
-#parrafoSinopsis {
-	margin-left: 6%;
+footer p {
+    padding: 10.5px;
+    margin: 0px;
+    line-height: 100%;
 }
