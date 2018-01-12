@@ -75,9 +75,9 @@ nav{
 	display: inherit;
 }
 .buscador2 {
-	width: 104%;
-	height: 55%;
-	background-color: #fff;
+  width: 104%;
+  height: 101%;
+  background-color: #fff;
 }
 #fondo_perfil{
   background: white;
@@ -113,8 +113,10 @@ transform: translateX(-3px);
 	
 }
 .posterPeli {
-	width: 24%;
-	height: 80%;
+	width: 132%;
+	height: 75%;
+	margin-left: 9%;
+  margin-top: 15%;
 }
 /*Carrusel 2*/
 .accordian {
@@ -189,4 +191,79 @@ footer p {
     padding: 10.5px;
     margin: 0px;
     line-height: 100%;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px;
+  font-size: 16px;
+}
+#estrenos{
+  color: white;
+}
+.secundario{
+  text-align: center;
+}
+.list-group-item{
+  background-color: transparent;
+  border:0px;
+}
+#portada{
+  margin: 0;
+  padding: 0;
+}
+#searchText{
+  width: 50%;
+  border: none;
+  display: inline-block;
+  margin-top: 5px;
+  outline: none;
+}
+.boton{
+  background: #a1455b!important;
+  color: white !important;
+  outline: none!important;
+}
+.boton:hover{
+  background: white!important;
+  color: #a1455b!important;
+}
+.col-lg-3{
+  height: 420px;
+  vertical-align: top;
+}
+.col-lg-3 img{
+  width: auto;
+  height: 300px;
+}
+.col-lg-3 h3{
+  margin-top: 10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+#titleMovieResultados {
+	font-size: 204%;
+  margin-top: 7%;
+  margin-left: 6%;
+}
+#sinopsis {
+	font-size: 130%;
+  margin-left: 6%;
+}
+#parrafoSinopsis {
+	margin-left: 6%;
+}
+#reproducir {
+	font-size: -webkit-xxx-large;
+}
+#adherir {
+	font-size: -webkit-xxx-large;
+}
+.repro {
+	margin-top: 16%;
+  margin-left: 27%;
+}
+.adhe {
+  margin-top: 147%;
+  margin-left: 27%;
 }
