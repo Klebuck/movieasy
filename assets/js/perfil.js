@@ -19,10 +19,14 @@ $(document).ready(function(){
         document.location.replace('index.html')
      })
 
+     $('#buscar_peli').click(function(){
+        document.location.replace('resultados.html')
+     })
+
      $('#peli_buscar').click(function(){
        pelicula = $('#buscar_pelicula').val();
        consulta(pelicula);
-     })  
+     })
 
 });
 
@@ -95,9 +99,13 @@ function cargaDatos(){
   function favoritos(new_favorito) {
  $('#lis_favoritos').append('<div class="row character">' +
     '<div class= "col-lg-12">'+
-    '<p><i class="fa fa-trash" aria-hidden="true"></i>&nbsp&nbsp' + new_favorito + '</p>' +
+    '<p id="pelicula_fav"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp&nbsp' + new_favorito + '</p>' +
     '</div>' +
     '</div>')
+
+ //$('.fa fa-trash').click(function(){
+   //    $('#pelicula_fav').remove();
+     //})   
 
 }
 
