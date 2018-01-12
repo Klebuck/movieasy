@@ -1,4 +1,4 @@
-/*var config = {
+var config = {
     apiKey: "AIzaSyCXbwKuVGx-iGeSPMp8tetJORIthSMYbRk",
     authDomain: "movie-dc30f.firebaseapp.com",
     databaseURL: "https://movie-dc30f.firebaseio.com",
@@ -8,10 +8,15 @@
   };
 firebase.initializeApp(config);
 var db = firebase.database();
-*/
+
 
 $(document).ready(function(){
      cargaDatos();
+
+     $('#cerrar_sesion').click(function(){
+       sessionStorage['usuarioLogueado'] = "";
+        document.location.replace('index.html')
+     })
 });
 
 
@@ -31,7 +36,16 @@ function cargaDatos(){
                 }
                 //console.log(usuario[usr[indice]].correo)
                 $('#nombreUsuario').text(usuario[usr[indice]].nombre);
-                $('#nickName').text(usr[indice]);
+               // $('#nickName').text(usr[indice]);
                 $('#fotoPerfil').attr('src',usuario[usr[indice]].foto)
           })
     }
+
+    //Función para buscar pelicula individual
+    function apiCallPel(pelicula){
+    $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&t=' + encodeURI(pelicula)).then(function(response){  
+    //return response.Language
+    console.log(response.Language);
+    });
+   
+    };

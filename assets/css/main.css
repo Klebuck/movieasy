@@ -201,7 +201,8 @@ footer p {
   color: white;
 }
 .secundario{
-  text-align: center;
+text-align: center;
+padding-bottom: 20px;
 }
 .list-group-item{
   background-color: transparent;

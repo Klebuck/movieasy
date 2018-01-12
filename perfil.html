@@ -11,7 +11,9 @@
 <body>
 	<!--navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#"><img src="assets/img/logo_movieasy.png" id="logo"></a> 
+    <a class="navbar-brand" href="#"><img src="assets/img/logo_movieasy.png" id="logo"></a>
+
+    <button id="cerrar_sesion" type="button" class="btn btn-dark ingresar">Cerrar Sesión</button> 
    </nav>
 	<!--fin navbar -->
 
@@ -22,10 +24,10 @@
 	  	<div class="col-lg-4">
 	  		<div class="row">
 	  			<div class="col-lg-12">
-			  		<h4>Gabriela Castillo</h4>
+			  		<h6 id="nombreUsuario"></h6>
 			  	</div>
 			  	<div class="col-lg-12">
-			  		<img class="imagen_perfil" src="assets/img/perfil.gif" class="img-thumbnail" alt="...">
+			  		<img id="fotoPerfil" class="imagen_perfil" src="" class="img-thumbnail" alt="...">
 			  	</div>
 			  	<div class="col-lg-12">
 			  	  <h4>Tus favoritos</h4>
@@ -41,7 +43,6 @@
 							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
 
 							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-
 							</ul>
 			  	</div>           		  
 	  	</div>
@@ -56,7 +57,6 @@
 			  	<div class="col-lg-12">
 			  		<img class="imagen_movie_perfil" src="assets/img/3.JPG" class="img-thumbnail" alt="...">
 			  	</div>
-			  	
 			  		<div class="col-lg-6 secundario">
 			  			<h4>Lo que has visto</h4>
 			  			<ul class="list-group">
@@ -84,9 +84,23 @@
 							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
 
 							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-							</ul>
-					  	 </div>
-					  	
+							 </ul>
+					  	</div>
+              
+              <div class="col-lg-12">
+			  		   <div class="input-group">
+							  <span class="input-group-btn">
+							    <button class="btn btn-primary" type="button">Go!</button>
+							  </span>
+							  <input type="text" class="form-control pl-2 pr-2" placeholder="Buscar Pelicula">
+							</div>
+			  	   </div>
+
+			  	   <div class="col-lg-12">
+			  		   <div id="consulta_pelicula"></div>
+			  	   </div>
+
+
 					  </div>
 			   	</div>
 			   </div>
@@ -109,5 +123,6 @@
     <!-- scripts a js-->
     <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
     <script src="https://use.fontawesome.com/2dd3618c98.js"></script>
+   <script type="text/javascript" src=assets/js/perfil.js></script> 
 </body>
 </html>

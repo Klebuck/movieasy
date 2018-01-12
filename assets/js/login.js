@@ -59,8 +59,8 @@ $(document).ready(function(){
            	  }	
             }
             if(logeado == 1){
-              //document.location.replace('resultados.html')
-              cargaDatos();
+              document.location.replace('perfil.html')
+              //cargaDatos();
             }else 
               {
                 $('#mensajeUsuario').text('"Ese usuario no existe o la contraseña esta incorrecta"', 3000, 'rounded');
@@ -92,8 +92,8 @@ $(document).ready(function(){
       usuarios.child(nick).set(usuario);
       sessionStorage['usuarioLogueado'] = nick;
       alert('usuarios registrado con exito')
-      //document.location.replace('resultados.html')
-      cargaDatos();
+      document.location.replace('perfil.html')
+      //cargaDatos();
     })
   
 });
