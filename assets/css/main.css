@@ -190,15 +190,12 @@ footer{
     bottom: 0;
     left: 0;
     right: 0;
-    height: 35px;
     text-align: center;
     color: #CCC;
 }
 footer p {
-    padding: 10.5px;
-    margin: 0px;
-    line-height: 100%;
-  display: block;
+  padding: 10.5px;
+  margin: 0px;
   color: #fff;
   text-decoration: none;
   padding: 20px;
@@ -279,7 +276,4 @@ padding-bottom: 20px;
 .adhe {
   margin-top: 147%;
   margin-left: 27%;
-}
-footer{
-	margin:none;
 }
