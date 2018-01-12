@@ -32,19 +32,7 @@
 			  	<div class="col-lg-12">
 			  	  <h4>Tus favoritos</h4>
 			  	</div> 
-			  	<div class="col-lg-12">
-			  	  <ul class="list-group">
-							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-trash" aria-hidden="true"></i>  Cras justo odio</li>
-							</ul>
-			  	</div>           		  
+			       <div id="lis_favoritos"></div>     		  
 	  	</div>
 	  </div>
 
@@ -59,48 +47,25 @@
 			  	</div>
 			  		<div class="col-lg-6 secundario">
 			  			<h4>Lo que has visto</h4>
-			  			<ul class="list-group">
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							</ul>
+			  			<div id="lis_visto"></div>
 			  		</div>
 			  		<div class="col-lg-6 secundario">
 			  			<h4>Lo que quieres ver</h4>
-			  			<ul class="list-group">
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-
-							  <li class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i> Cras justo odio</li>
-							 </ul>
+			  			<div id="lis_ver"></div>
 					  	</div>
               
               <div class="col-lg-12">
-			  		   <div class="input-group">
+			  		   <div class="input-group buscador_pelicula">
 							  <span class="input-group-btn">
-							    <button class="btn btn-primary" type="button">Go!</button>
+							    <button id="peli_buscar" class="btn btn-primary" type="button">Go!</button>
 							  </span>
-							  <input type="text" class="form-control pl-2 pr-2" placeholder="Buscar Pelicula">
+							  <input id="buscar_pelicula" type="text" class="form-control pl-2 pr-2" placeholder="Buscar Pelicula">
 							</div>
 			  	   </div>
 
 			  	   <div class="col-lg-12">
 			  		   <div id="consulta_pelicula"></div>
 			  	   </div>
-
-
 					  </div>
 			   	</div>
 			   </div>
@@ -117,7 +82,7 @@
 
 	<!-- Scripts -->
     <!-- link a bootstrap plus-->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
     <!-- scripts a js-->

@@ -92,6 +92,13 @@ nav{
 	width: 150px;
 	height: 150px;
 }
+.imagen_movie_buscar{
+	width: 100px;
+	height: 100px;
+}
+.buscador_pelicula{
+padding-bottom: 20px;
+}
 .imagen_movie_perfil{
 	width: 90%;
 	height: 300px;
@@ -263,6 +270,11 @@ padding-bottom: 20px;
 .repro {
 	margin-top: 16%;
   margin-left: 27%;
+}
+
+.imagen_poster {
+	width: 200px;
+	height: 220px;
 }
 .adhe {
   margin-top: 147%;

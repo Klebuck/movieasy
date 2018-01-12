@@ -9,6 +9,7 @@ var config = {
 firebase.initializeApp(config);
 var db = firebase.database();
 
+var titulo="";
 
 $(document).ready(function(){
      cargaDatos();
@@ -17,6 +18,12 @@ $(document).ready(function(){
        sessionStorage['usuarioLogueado'] = "";
         document.location.replace('index.html')
      })
+
+     $('#peli_buscar').click(function(){
+       pelicula = $('#buscar_pelicula').val();
+       consulta(pelicula);
+     })  
+
 });
 
 
@@ -42,10 +49,75 @@ function cargaDatos(){
     }
 
     //Función para buscar pelicula individual
-    function apiCallPel(pelicula){
-    $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&t=' + encodeURI(pelicula)).then(function(response){  
-    //return response.Language
-    console.log(response.Language);
+    function consulta(pelicula){
+    $.getJSON('https://www.omdbapi.com/?apikey=3a181f1c&t=' + encodeURI(pelicula)).then(function(response){   
+   console.log(response);
+  $('#consulta_pelicula').append('<div class="row character">' +
+    '<div class= "col-md-4 ">'+
+     '<img class= "imagen_poster" src="' + response.Poster + '">'+
+    '</div>' +
+    '<div class= "col-md-8 text-left">'+
+    '<p class="form-control pl-2 pr-2">Titulo: ' + response.Title + '</p>' +
+    '<p class="form-control pl-2 pr-2">Idioma: ' + response.Actors + '</p>' +
+    '<p class="form-control pl-2 pr-2">Idioma: ' + response.Language + '</p>' +
+    '<p class="form-control pl-2 pr-2">Categoría: ' + response.Genre + '</p>' +
+    '<div class="row character">' +
+    '<div class= "col-md-3 col-md-push-2 ">'+
+    '<button  type="button" class="favoritos btn btn-dark ingresar">Favoritos</button>' +
+    '</div>' +
+    '<div class= "col-md-2 ">'+
+    '<button  type="button" class="visto btn btn-dark ingresar">Vistos</button>' +
+    '</div>' +
+    '<div class= "col-md-2 col-md-pull-3 ">'+
+    '<button  type="button" class="ver btn btn-dark ingresar">Ver</button>' +
+    '</div>' +
+    '</div>' +
+    '</div>' +
+    '</div>')
+  //Le asigno el valor de response.Title a la variable titulo que esta declarada arriba
+     titulo=response.Title
+    $('.favoritos').click(function(){
+       favoritos(titulo);
+     })
+
+    $('.visto').click(function(){
+       vistos(titulo);
+     })
+
+    $('.ver').click(function(){
+       ver(titulo);
+     })
+
     });
    
-    };
+  }
+ //new_favorito es el parámetro que recibe la variable titulo
+  function favoritos(new_favorito) {
+ $('#lis_favoritos').append('<div class="row character">' +
+    '<div class= "col-lg-12">'+
+    '<p><i class="fa fa-trash" aria-hidden="true"></i>&nbsp&nbsp' + new_favorito + '</p>' +
+    '</div>' +
+    '</div>')
+
+}
+
+function vistos(new_visto) {
+ $('#lis_visto').append('<div class="row character">' +
+    '<div class= "col-lg-6">'+
+    '<p class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>&nbsp&nbsp' + new_visto + '</p>' +
+    '</div>' +
+    '</div>')
+
+}
+
+function ver(new_ver) {
+ $('#lis_ver').append('<div class="row character">' +
+    '<div class= "col-lg-6">'+
+    '<p class="list-group-item"><i class="fa fa-play-circle-o fa-2x" aria-hidden="true"></i>&nbsp&nbsp' + new_ver + '</p>' +
+    '</div>' +
+    '</div>')
+
+}
+
+  
+    
